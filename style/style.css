@@ -93,19 +93,25 @@ input:focus, textarea:focus{
   outline: none;
 }
 
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 20px;
+}
+
 /* Header Section */
 
 header {
-  height: 100vh;
   width: 100%;
-  padding: 50px 5%;
+  padding: 40px 5%;
 }
 
 nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block: 0 50px;
+  margin-block: 0 20px;
 }
 
 nav .logo{
@@ -135,22 +141,20 @@ nav .contact-link {
   
 }
 
-.profile-details {
-  display: flex;
+.hero-image {
+  /* display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-}
-
-.profile-details img{
-  max-width: 350px;
+  justify-content: center; */
+  width: 100%;
+  /* max-width: 60%; */
   /* height: 200px; */
   border-radius: 5px;
   object-fit: cover;
 }  
 
 .hero-text h1{
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 600;
   color: var(--accent);
   line-height: 1.2;
@@ -202,13 +206,6 @@ nav .contact-link {
   padding-block: 50px;
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 20px;
-}
-
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -256,12 +253,6 @@ nav .contact-link {
 
 .education{
   margin: 100px 0;
-}
-
-.education h2{
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--accent);
 }
 
 .qualification{
@@ -331,12 +322,6 @@ nav .contact-link {
   padding-block: 50px;
 }
 
-.projects h2{
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--accent);
-}
-
 .projects-grid{
   display: grid;
   gap: 60px;
@@ -376,15 +361,12 @@ nav .contact-link {
   color: var(--gray);
 }
 
-.project-tech{
-  margin-bottom: 20px;
-}
-
 .project-tech .tech-tag{
   display: inline-block;
   background: var(--accent);
   padding: 5px 20px;
   margin-right: 20px;
+  margin-bottom: 20px;
   border-radius: 25px;
   color: var(--primary);
 }
@@ -411,10 +393,7 @@ nav .contact-link {
   max-width: 600px;
 }
 
-.contact h2{
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: var(--accent);
+.contact .section-title{
   text-align: center;
 }
 
@@ -461,4 +440,50 @@ footer .social-links a{
 
 footer p{
   color: var(--gray);
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+  .container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+
+  header{
+    padding: 20px 5%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-image {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 5px solid var(--accent);
+    margin-bottom: 20px;
+    object-fit: cover;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  
 }
